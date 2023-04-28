@@ -37,24 +37,24 @@
             this.BtnDelete = new System.Windows.Forms.Button();
             this.BtnEdit = new System.Windows.Forms.Button();
             this.BtnNew = new System.Windows.Forms.Button();
-            this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.DgPayMode = new System.Windows.Forms.DataGridView();
+            this.BtnSearch = new System.Windows.Forms.Button();
+            this.TxtSearch = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.tabPagePayModeDetail = new System.Windows.Forms.TabPage();
-            this.label3 = new System.Windows.Forms.Label();
-            this.TxtPayModeId = new System.Windows.Forms.TextBox();
-            this.label4 = new System.Windows.Forms.Label();
-            this.TxtPayModeName = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.TxtPayModeObservation = new System.Windows.Forms.TextBox();
-            this.BtnSave = new System.Windows.Forms.Button();
             this.BtnCancel = new System.Windows.Forms.Button();
+            this.BtnSave = new System.Windows.Forms.Button();
+            this.TxtPayModeObservation = new System.Windows.Forms.TextBox();
+            this.label5 = new System.Windows.Forms.Label();
+            this.TxtPayModeName = new System.Windows.Forms.TextBox();
+            this.label4 = new System.Windows.Forms.Label();
+            this.TxtPayModeId = new System.Windows.Forms.TextBox();
+            this.label3 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
             this.tabControl1.SuspendLayout();
             this.tabPagePayModeList.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgPayMode)).BeginInit();
             this.tabPagePayModeDetail.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -107,9 +107,9 @@
             this.tabPagePayModeList.Controls.Add(this.BtnDelete);
             this.tabPagePayModeList.Controls.Add(this.BtnEdit);
             this.tabPagePayModeList.Controls.Add(this.BtnNew);
-            this.tabPagePayModeList.Controls.Add(this.dataGridView1);
-            this.tabPagePayModeList.Controls.Add(this.button1);
-            this.tabPagePayModeList.Controls.Add(this.textBox1);
+            this.tabPagePayModeList.Controls.Add(this.DgPayMode);
+            this.tabPagePayModeList.Controls.Add(this.BtnSearch);
+            this.tabPagePayModeList.Controls.Add(this.TxtSearch);
             this.tabPagePayModeList.Controls.Add(this.label2);
             this.tabPagePayModeList.Location = new System.Drawing.Point(4, 22);
             this.tabPagePayModeList.Name = "tabPagePayModeList";
@@ -155,32 +155,32 @@
             this.BtnNew.TabIndex = 4;
             this.BtnNew.UseVisualStyleBackColor = true;
             // 
-            // dataGridView1
+            // DgPayMode
             // 
-            this.dataGridView1.AllowUserToAddRows = false;
-            this.dataGridView1.AllowUserToDeleteRows = false;
-            this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Location = new System.Drawing.Point(34, 96);
-            this.dataGridView1.Name = "dataGridView1";
-            this.dataGridView1.ReadOnly = true;
-            this.dataGridView1.Size = new System.Drawing.Size(515, 205);
-            this.dataGridView1.TabIndex = 3;
+            this.DgPayMode.AllowUserToAddRows = false;
+            this.DgPayMode.AllowUserToDeleteRows = false;
+            this.DgPayMode.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.DgPayMode.Location = new System.Drawing.Point(34, 96);
+            this.DgPayMode.Name = "DgPayMode";
+            this.DgPayMode.ReadOnly = true;
+            this.DgPayMode.Size = new System.Drawing.Size(515, 205);
+            this.DgPayMode.TabIndex = 3;
             // 
-            // button1
+            // BtnSearch
             // 
-            this.button1.Image = global::Supermarket_mvp.Properties.Resources.search_small;
-            this.button1.Location = new System.Drawing.Point(495, 37);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(54, 48);
-            this.button1.TabIndex = 2;
-            this.button1.UseVisualStyleBackColor = true;
+            this.BtnSearch.Image = global::Supermarket_mvp.Properties.Resources.search_small;
+            this.BtnSearch.Location = new System.Drawing.Point(495, 37);
+            this.BtnSearch.Name = "BtnSearch";
+            this.BtnSearch.Size = new System.Drawing.Size(54, 48);
+            this.BtnSearch.TabIndex = 2;
+            this.BtnSearch.UseVisualStyleBackColor = true;
             // 
-            // textBox1
+            // TxtSearch
             // 
-            this.textBox1.Location = new System.Drawing.Point(34, 52);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(453, 20);
-            this.textBox1.TabIndex = 1;
+            this.TxtSearch.Location = new System.Drawing.Point(34, 52);
+            this.TxtSearch.Name = "TxtSearch";
+            this.TxtSearch.Size = new System.Drawing.Size(453, 20);
+            this.TxtSearch.TabIndex = 1;
             // 
             // label2
             // 
@@ -210,40 +210,31 @@
             this.tabPagePayModeDetail.UseVisualStyleBackColor = true;
             this.tabPagePayModeDetail.Click += new System.EventHandler(this.tabPagePayModeDetail_Click);
             // 
-            // label3
+            // BtnCancel
             // 
-            this.label3.AutoSize = true;
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(31, 21);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(78, 13);
-            this.label3.TabIndex = 0;
-            this.label3.Text = "Pay Mode Id";
-            this.label3.Click += new System.EventHandler(this.label3_Click);
+            this.BtnCancel.Image = global::Supermarket_mvp.Properties.Resources.cancel;
+            this.BtnCancel.Location = new System.Drawing.Point(145, 236);
+            this.BtnCancel.Name = "BtnCancel";
+            this.BtnCancel.Size = new System.Drawing.Size(67, 49);
+            this.BtnCancel.TabIndex = 7;
+            this.BtnCancel.UseVisualStyleBackColor = true;
             // 
-            // TxtPayModeId
+            // BtnSave
             // 
-            this.TxtPayModeId.Location = new System.Drawing.Point(34, 37);
-            this.TxtPayModeId.Name = "TxtPayModeId";
-            this.TxtPayModeId.Size = new System.Drawing.Size(144, 20);
-            this.TxtPayModeId.TabIndex = 1;
+            this.BtnSave.Image = global::Supermarket_mvp.Properties.Resources.save;
+            this.BtnSave.Location = new System.Drawing.Point(34, 236);
+            this.BtnSave.Name = "BtnSave";
+            this.BtnSave.Size = new System.Drawing.Size(75, 49);
+            this.BtnSave.TabIndex = 6;
+            this.BtnSave.UseVisualStyleBackColor = true;
             // 
-            // label4
+            // TxtPayModeObservation
             // 
-            this.label4.AutoSize = true;
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(31, 80);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(99, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Pay Mode Name";
-            // 
-            // TxtPayModeName
-            // 
-            this.TxtPayModeName.Location = new System.Drawing.Point(34, 96);
-            this.TxtPayModeName.Name = "TxtPayModeName";
-            this.TxtPayModeName.Size = new System.Drawing.Size(196, 20);
-            this.TxtPayModeName.TabIndex = 3;
+            this.TxtPayModeObservation.Location = new System.Drawing.Point(34, 152);
+            this.TxtPayModeObservation.Multiline = true;
+            this.TxtPayModeObservation.Name = "TxtPayModeObservation";
+            this.TxtPayModeObservation.Size = new System.Drawing.Size(196, 49);
+            this.TxtPayModeObservation.TabIndex = 5;
             // 
             // label5
             // 
@@ -255,31 +246,40 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Pay Mode Observation";
             // 
-            // TxtPayModeObservation
+            // TxtPayModeName
             // 
-            this.TxtPayModeObservation.Location = new System.Drawing.Point(34, 152);
-            this.TxtPayModeObservation.Multiline = true;
-            this.TxtPayModeObservation.Name = "TxtPayModeObservation";
-            this.TxtPayModeObservation.Size = new System.Drawing.Size(196, 49);
-            this.TxtPayModeObservation.TabIndex = 5;
+            this.TxtPayModeName.Location = new System.Drawing.Point(34, 96);
+            this.TxtPayModeName.Name = "TxtPayModeName";
+            this.TxtPayModeName.Size = new System.Drawing.Size(196, 20);
+            this.TxtPayModeName.TabIndex = 3;
             // 
-            // BtnSave
+            // label4
             // 
-            this.BtnSave.Image = global::Supermarket_mvp.Properties.Resources.save;
-            this.BtnSave.Location = new System.Drawing.Point(34, 236);
-            this.BtnSave.Name = "BtnSave";
-            this.BtnSave.Size = new System.Drawing.Size(75, 49);
-            this.BtnSave.TabIndex = 6;
-            this.BtnSave.UseVisualStyleBackColor = true;
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.Location = new System.Drawing.Point(31, 80);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(99, 13);
+            this.label4.TabIndex = 2;
+            this.label4.Text = "Pay Mode Name";
             // 
-            // BtnCancel
+            // TxtPayModeId
             // 
-            this.BtnCancel.Image = global::Supermarket_mvp.Properties.Resources.cancel;
-            this.BtnCancel.Location = new System.Drawing.Point(145, 236);
-            this.BtnCancel.Name = "BtnCancel";
-            this.BtnCancel.Size = new System.Drawing.Size(67, 49);
-            this.BtnCancel.TabIndex = 7;
-            this.BtnCancel.UseVisualStyleBackColor = true;
+            this.TxtPayModeId.Location = new System.Drawing.Point(34, 37);
+            this.TxtPayModeId.Name = "TxtPayModeId";
+            this.TxtPayModeId.Size = new System.Drawing.Size(144, 20);
+            this.TxtPayModeId.TabIndex = 1;
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(31, 21);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(78, 13);
+            this.label3.TabIndex = 0;
+            this.label3.Text = "Pay Mode Id";
+            this.label3.Click += new System.EventHandler(this.label3_Click);
             // 
             // PayModeView
             // 
@@ -297,7 +297,7 @@
             this.tabControl1.ResumeLayout(false);
             this.tabPagePayModeList.ResumeLayout(false);
             this.tabPagePayModeList.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.DgPayMode)).EndInit();
             this.tabPagePayModeDetail.ResumeLayout(false);
             this.tabPagePayModeDetail.PerformLayout();
             this.ResumeLayout(false);
@@ -315,9 +315,9 @@
         private System.Windows.Forms.Button BtnDelete;
         private System.Windows.Forms.Button BtnEdit;
         private System.Windows.Forms.Button BtnNew;
-        private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.DataGridView DgPayMode;
+        private System.Windows.Forms.Button BtnSearch;
+        private System.Windows.Forms.TextBox TxtSearch;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.TabPage tabPagePayModeDetail;
         private System.Windows.Forms.Label label3;
