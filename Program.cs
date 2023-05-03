@@ -1,9 +1,10 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
+using Supermarket_mvp._Repositories;
+using Supermarket_mvp.Models;
+using Supermarket_mvp.Presenters;
+using Supermarket_mvp.Properties;
 using Supermarket_mvp.Views;
+
 
 namespace Supermarket_mvp
 {
@@ -15,9 +16,13 @@ namespace Supermarket_mvp
         [STAThread]
         static void Main()
         {
-            Application.EnableVisualStyles();
-            Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new PayModeView());
+            ApplicationConfiguration.Initialize();
+            string sqlConnectionString = Settings.Default.SqlConnection;
+            IPayModeView view = new PayModeView();
+            ///IPayModeRepository reposity = new PayModeRepository(sqlConnectionString);
+            new MainPresenter(view, sqlConnectionString);
+            Application.Run((Form) view);
+            ///Application.Run(new PayModeView()); 
         }
     }
 }
